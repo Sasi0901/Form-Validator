@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:valid{
+            background-color: greenyellow;
+        }
+        input:invalid{
+            background-color: red;
+        }
+        .PI{
+            font-size: x-large;
+            position: absolute;
+            left: 100px;
+            background-color: azure;
+            margin: auto;
+            padding: 50px;;
+        }
+        .EI{
+            font-size: x-large;
+            position: absolute;
+            left: 100px;
+            top: 600px;
+            background-color: azure;
+            margin: auto;
+            padding: 50px;;
+        }
+        .PD{
+            font-size: x-large;
+            position: absolute;
+            left: 1200px;
+            background-color: azure;
+            margin: auto;
+            padding: 50px;;
+        }
+        input{
+            size: 50px;
+        }
+    </style>
+    
+</head>
+<body style="background-color:aliceblue">
+    <h1 style="text-align: center;">Registration of Online Exam..</h1>
+    <div class="PI">
+        <h2>Personal Information</h2>
+    <form name="register" action="#sec2">
+       Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sname" ><p id="nval" style="display:inline;"></p><br><br>
+       Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email"><p id="eval" style="display:inline;"></p><br><br>
+       Phone Number:&nbsp;<input type="number" name="phno" minlength="10" maxlength="10" ><p id="pval" style="display:inline;"></p><br><br>
+       Date of Birth:&nbsp;&nbsp; <input type="date" name="age"><p id="ageval" style="display:inline;"></p><br><br>
+       <input type="submit" id="btn" value="Submit" disabled>
+    </form>
+</div>
+<section id="sec2">
+<div class="EI">
+    <h2>Educational Information</h2>
+    <form name="register2" action="#sec3">
+        10th Marks: <input type="number" name="10th" required><p id="mar10" style="display:inline;"></p><br><br>
+        School Name: <input type="text"><br><br>
+        12th Marks: <input type="number" name="12th" required><p id="mar12" style="display:inline;"></p><br><br>
+        College Name: <input type="text"><br><br>
+        <input type="submit" id="btn2" value="Submit">
+    </form>
+</div>
+</section>
+<section id="sec3">
+    <div class="PD">
+        <h2>Payement Details</h2>
+        <form name="register3">
+            Card Payement:  <input type="radio" name="pd1" value="Card" onclick="detreq()"><input type="text" name="ins"><p id="ins1" style="display:inline;"></p><br><br>
+            UPI Payement :<input type="radio" name ="pd1" value="UPI" onclick="detreq()"><input type="text" name="ins2"><p id="ins2" style="display:inline;"></p><br><br>
+        </form>
+    </div>
+    </section>
+<script src="main.js"></script>
+</body>
+</html>
